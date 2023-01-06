@@ -8,23 +8,39 @@
   
   <title>Frontend Mentor | News homepage</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel='stylesheet' href="style.css">
 </head>
 <body>
   <main>
+    <div id="mobile_menu" name="toggle" class="popup">
+      <div class="mobile_menu">
+        <nav class="sidenav">
+          <!-- Convert to <a> if actually active navigation -->
+          <p>Home</p>
+          <p>New</p>
+          <p>Popular</p>
+          <p>Trending</p>
+          <p>Categories</p>
+        </nav>
+      </div>
+      <div class="overlay"></div>
+    </div>
     <div class="header">
       <img src="./assets/images/logo.svg" alt="logo" class="logo"/>
-      <img src="./assets/images/icon-menu.svg" alt="menu" class="menu"/>
-      <img src="./assets/images/icon-menu-close.svg" alt="menu-closed" class="menu-closed"/>
-      <nav>
+      <a href="javascript:void(0);" class="menu-open" name="toggle" onclick="myFunction()">
+        <img src="./assets/images/icon-menu.svg" alt="menu" id="menu" class="icon"/>
+      </a>
+      <a href="javascript:void(0)" class="menu-closed" name="toggle" onclick="myFunction()">
+        <img src="./assets/images/icon-menu-close.svg" alt="menu-closed" id="menu_closed" class="icon"/>
+      </a>
+      <nav class="topnav">
         <!-- Convert to <a> if actually active navigation -->
         <p>Home</p>
         <p>New</p>
         <p>Popular</p>
         <p>Trending</p>
         <p>Categories</p>
-        </nav>
+      </nav>
     </div>
     <div class="body">
       <div class="primary">
@@ -104,5 +120,22 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/VSandwar74">Vishakh Sandwar</a>.
   </div>
+  <script>
+    function myFunction() {
+      let elements = document.getElementsByName("toggle");
+      for (let i = 0; i < 3; i++) {
+        let element1 = elements[i]
+          if (element1.style.display === "block") {
+            element1.style.display = "none";
+          } else if (element1.style.display === "none") {
+            element1.style.display = "block";
+          } else if (element1.className === "menu-open") {
+            element1.style.display = "none";
+          } else {
+            element1.style.display = "block";
+          }
+      }
+      }
+    </script>
 </body>
 </html>
