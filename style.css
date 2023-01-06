@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* @font-face {
+    font-family: 'Inter';
+    src: url();
+} */
+body {
+    height: 100vh;
+    background-color: #FFFCF9;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 165px 130px 165px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.header p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #5D5B65;
+}
+.menu {
+    display: none;
+    align-self: center;
+    width: 40px;
+    height: 17px;
+}
+.menu-closed {
+    display: none;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 440px;
+    margin-right: 0;
+    align-self: center;
+}
+nav p:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+.body {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 512px;
+}
+.primary {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.desktop-pic {
+    display: block;
+    width: 730px;
+    height: 300px;
+}
+.mobile-pic {
+    display: none;
+}
+.primary-tag {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    justify-content: space-between;
+}
+.title {
+    width: 300px;
+    height: 160px;
+    align-items: center;
+}
+.title h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 55px;
+    color: black;
+    line-height: 95%;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+}
+.description p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #5D5B65;
+    line-height: 150%;
+}
+.button {
+    width: 185px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #F05C51;
+}
+.button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+.button p{
+    color: white;
+}
+.new {
+    width: 350px;
+    height: 512px;
+    background-color: black;
+    padding: 35px 30px 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.new h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #ECA554;
+}
+.new h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+.new h4:hover {
+    cursor: pointer;
+    color: #ECA554;
+}
+.new p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #B8B9CC;
+    line-height: 150%;
+}
+.new hr {
+    height: 1px;
+    background-color: #5D5B65;
+    border: 0;
+    opacity: 75%;
+}
+.footer {
+    margin-top: 72px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+}
+.article img {
+    height: 125px;
+    width: 100px;
+}
+.data {
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.data h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #C9C7CC;
+}
+.data h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+}
+.data h4:hover {
+    color: #F05C51;
+}
+.data p { 
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: gray;
+    line-height: 150%;
+}
+.attribution { 
+    margin-top: 130px;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+@media (max-width: 375px) {
+    body {
+        padding: 10px;
+    }
+    .logo {
+        width: 65px;
+        height: 40px;
+    }
+    nav {
+        display: none;
+    }
+    .body {
+        flex-direction: column;
+        height: auto;
+        justify-content: space-between;;
+    }
+    .desktop-pic {
+
+        display: none;
+    }
+    .mobile-pic {
+        display: block;
+    }
+    .primary-tag {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .description {
+        margin-top: 10px;
+    }
+    .button {
+        margin-top: 30px;
+    }
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+    .primary {
+        justify-content: space-between;
+        height: 680px;
+    }
+    .new {
+        margin-top: 72px;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 445px;
+    }
+}
